@@ -1,0 +1,4 @@
+<!--pages/JTomato/JTomato.wxml-->
+<view class='container'>
+  <view>{{workTime}}</view>
+</view>
