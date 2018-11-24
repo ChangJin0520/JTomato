@@ -1,28 +1,26 @@
-/**index.wxss**/
-.userinfo {
+/** JTomato index.wxss **/
+.container {
   display: flex;
+  height: 100%;
   flex-direction: column;
   align-items: center;
-  font-family: '微软雅黑';
+  /* justify-content: space-between; */
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
+.openTomato {
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 300rpx;
+  line-height: 200rpx;
   border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  color: #0fae6f;
+  background-color: #e95257;
 }
 
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
-}
-
-.user-motto {
-  display: inline-block;
+.motto {
+  position: fixed;
+  bottom: 100rpx;
   width: 340rpx;
-  line-height: 60rpx;
 }
