@@ -1,0 +1,14 @@
+var filters = {
+  num2time: function (value) {
+    var minute = parseInt(value / 60)
+    var minuteStr = '00' + minute
+    var second = parseInt(value % 60)
+    var secondStr = '00' + second
+
+    return minuteStr.slice(minuteStr.length - 2, minuteStr.length) + ' : ' + secondStr.slice(secondStr.length - 2, secondStr.length)
+  }
+}
+
+module.exports = {
+  num2time: filters.num2time
+}

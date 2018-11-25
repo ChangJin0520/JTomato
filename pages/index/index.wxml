@@ -1,5 +1,7 @@
 <!-- JTomato index.wxml-->
+<wxs module="filters" src="../filters/filters.wxs"></wxs>
 <view class='container'>
-  <text class='openTomato' bindtip="">START</text>
+  <text class='openTomato' bindtap="startClock" wx:if="{{buttonShow}}">START</text>
+  <text>{{filters.num2time(time)}}</text>
   <text class='motto'>{{motto}}</text>
 </view>
