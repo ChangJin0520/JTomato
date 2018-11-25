@@ -4,15 +4,21 @@ const app = getApp()
 
 Page({
   data: {
-    motto: '富强 民主 文明 和谐自由 平等 公正 法治爱国 敬业 诚信 友善',
-    buttonShow: true,
-    time: 11 * 60
+    motto: '富强 民主 文明 和谐\n自由 平等 公正 法治\n爱国 敬业 诚信 友善',
+    isDisable: false,
+    workFlag: true,
+    workTime: 1 * 60,
+    easeTime: 1 * 60,
+    time: 25 * 60
   },
-  onLoad: function () {},
-  startClock: function (e) {
+  onLoad: function() {},
+  startClock: function(e) {
     this.setData({
-      buttonShow: !this.data.buttonShow
+      isDisable: true,
+      time: this.data.workFlag ? this.data.workTime : this.data.easeTime,
+      workFlag: !this.data.workFlag
     })
+
     let _interval = setInterval(() => {
       let timeNow = this.data.time - 1
 
@@ -21,11 +27,16 @@ Page({
       })
 
       if (timeNow < 1) {
-        clearInterval(_interval)
         this.setData({
-          buttonShow: !this.data.buttonShow
+          isDisable: false
         })
+
+        clearInterval(_interval)
+
+        const bgm = wx.getBackgroundAudioManager()
+        bgm.title = 'coins'
+        bgm.src = 'https://636a-cjyun-4a3784-1258142464.tcb.qcloud.la/music/coins.mp3?sign=b0f8110b451a63d3347c50b16d33a115&t=1543162379'
       }
-    }, 20)
+    }, 100)
   }
 })

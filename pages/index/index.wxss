@@ -10,7 +10,7 @@
 .openTomato {
   width: 200rpx;
   height: 200rpx;
-  margin-top: 300rpx;
+  margin-top: 500rpx;
   line-height: 200rpx;
   border-radius: 50%;
   text-align: center;
@@ -22,5 +22,13 @@
 .motto {
   position: fixed;
   bottom: 100rpx;
-  width: 340rpx;
+}
+
+/* 时间 */
+.time {
+  position: absolute;
+  top: 300rpx;
+  font-size: 100rpx;
+  font-weight: bold;
+  color: #e95257;
 }
